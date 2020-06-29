@@ -27,5 +27,10 @@ namespace MyCalculator
         {
 
         }
+
+        private void Numbers(object sender, MouseEventArgs e)
+        {
+            txtDisplay.Text += ((Button)sender).Text;
+        }
     }
 }
