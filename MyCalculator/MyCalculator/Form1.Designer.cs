@@ -184,6 +184,7 @@
             this.btnplus.TabIndex = 8;
             this.btnplus.Text = "+";
             this.btnplus.UseVisualStyleBackColor = true;
+            this.btnplus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
             // 
             // btn9
             // 
@@ -223,6 +224,7 @@
             this.btnsubtraction.TabIndex = 4;
             this.btnsubtraction.Text = "-";
             this.btnsubtraction.UseVisualStyleBackColor = true;
+            this.btnsubtraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
             // 
             // btndot
             // 
@@ -232,6 +234,7 @@
             this.btndot.TabIndex = 3;
             this.btndot.Text = ".";
             this.btndot.UseVisualStyleBackColor = true;
+            this.btndot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Numbers);
             // 
             // btnMultiply
             // 
@@ -241,6 +244,7 @@
             this.btnMultiply.TabIndex = 2;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
             // 
             // btnDivision
             // 
@@ -250,6 +254,7 @@
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
+            this.btnDivision.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
             // 
             // btnequal
             // 
@@ -259,6 +264,7 @@
             this.btnequal.TabIndex = 18;
             this.btnequal.Text = "=";
             this.btnequal.UseVisualStyleBackColor = true;
+            this.btnequal.Click += new System.EventHandler(this.btnequal_Click);
             // 
             // btnOnOff
             // 
