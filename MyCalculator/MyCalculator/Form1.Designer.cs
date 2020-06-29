@@ -85,7 +85,7 @@
             this.panel1.Controls.Add(this.btnequal);
             this.panel1.Location = new System.Drawing.Point(1, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 299);
+            this.panel1.Size = new System.Drawing.Size(227, 299);
             this.panel1.TabIndex = 2;
             // 
             // btnClear
