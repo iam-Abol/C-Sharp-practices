@@ -27,7 +27,8 @@ namespace MyCalculator
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            btndot.Enabled = !txtDisplay.Text.Contains(".");
+            btnBackSpace.Enabled = Convert.ToBoolean(txtDisplay.TextLength);
         }
 
         private void Numbers(object sender, MouseEventArgs e)
@@ -35,12 +36,8 @@ namespace MyCalculator
             txtDisplay.Text += ((Button)sender).Text;
         }
 
-        private void oprators(object sender, MouseEventArgs e)
-        {
-            a = Convert.ToDouble(txtDisplay.Text);
-            op = ((Button)sender).Text;
-            txtDisplay.Text = "";
-        }
+       
+           
 
         private void btnequal_Click(object sender, EventArgs e)
         {
@@ -61,6 +58,19 @@ namespace MyCalculator
                     break;
             }
             txtDisplay.Text = result.ToString();
+        }
+
+        private void operators(object sender, MouseEventArgs e)
+        {
+             a = Convert.ToDouble(txtDisplay.Text);
+            op = ((Button)sender).Text;
+            txtDisplay.Text = "";
+        
+        }
+
+        private void btnBachSpace_Click(object sender, EventArgs e)
+        {
+            txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.TextLength - 1);
         }
     }
 }

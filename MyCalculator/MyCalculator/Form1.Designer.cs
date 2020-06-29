@@ -31,7 +31,7 @@
             this.txtDisplay = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
-            this.btnBachSpace = new System.Windows.Forms.Button();
+            this.btnBackSpace = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Controls.Add(this.btnBachSpace);
+            this.panel1.Controls.Add(this.btnBackSpace);
             this.panel1.Controls.Add(this.btn7);
             this.panel1.Controls.Add(this.btn4);
             this.panel1.Controls.Add(this.btn1);
@@ -97,14 +97,15 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnBachSpace
+            // btnBackSpace
             // 
-            this.btnBachSpace.Location = new System.Drawing.Point(9, 11);
-            this.btnBachSpace.Name = "btnBachSpace";
-            this.btnBachSpace.Size = new System.Drawing.Size(102, 53);
-            this.btnBachSpace.TabIndex = 16;
-            this.btnBachSpace.Text = "<-------";
-            this.btnBachSpace.UseVisualStyleBackColor = true;
+            this.btnBackSpace.Location = new System.Drawing.Point(9, 11);
+            this.btnBackSpace.Name = "btnBackSpace";
+            this.btnBackSpace.Size = new System.Drawing.Size(102, 53);
+            this.btnBackSpace.TabIndex = 16;
+            this.btnBackSpace.Text = "<-------";
+            this.btnBackSpace.UseVisualStyleBackColor = true;
+            this.btnBackSpace.Click += new System.EventHandler(this.btnBachSpace_Click);
             // 
             // btn7
             // 
@@ -184,7 +185,7 @@
             this.btnplus.TabIndex = 8;
             this.btnplus.Text = "+";
             this.btnplus.UseVisualStyleBackColor = true;
-            this.btnplus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
+            this.btnplus.MouseClick += new System.Windows.Forms.MouseEventHandler(this.operators);
             // 
             // btn9
             // 
@@ -224,7 +225,7 @@
             this.btnsubtraction.TabIndex = 4;
             this.btnsubtraction.Text = "-";
             this.btnsubtraction.UseVisualStyleBackColor = true;
-            this.btnsubtraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
+            this.btnsubtraction.MouseClick += new System.Windows.Forms.MouseEventHandler(this.operators);
             // 
             // btndot
             // 
@@ -244,7 +245,7 @@
             this.btnMultiply.TabIndex = 2;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
-            this.btnMultiply.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
+            this.btnMultiply.MouseClick += new System.Windows.Forms.MouseEventHandler(this.operators);
             // 
             // btnDivision
             // 
@@ -254,7 +255,7 @@
             this.btnDivision.TabIndex = 17;
             this.btnDivision.Text = "/";
             this.btnDivision.UseVisualStyleBackColor = true;
-            this.btnDivision.MouseClick += new System.Windows.Forms.MouseEventHandler(this.oprators);
+            this.btnDivision.MouseClick += new System.Windows.Forms.MouseEventHandler(this.operators);
             // 
             // btnequal
             // 
@@ -299,7 +300,7 @@
         private System.Windows.Forms.TextBox txtDisplay;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnBachSpace;
+        private System.Windows.Forms.Button btnBackSpace;
         private System.Windows.Forms.Button btn7;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn1;
