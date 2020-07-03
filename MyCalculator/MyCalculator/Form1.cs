@@ -14,6 +14,7 @@ namespace MyCalculator
     {
         double a, b, result;
         string op;
+        bool flag = false;
         public Form1()
         {
             InitializeComponent();
@@ -34,6 +35,11 @@ namespace MyCalculator
 
         private void Numbers(object sender, MouseEventArgs e)
         {
+            if (flag == true)
+            {
+                txtDisplay.Text = "";
+                flag = false;
+            }
             txtDisplay.Text += ((Button)sender).Text;
         }
 
@@ -65,7 +71,7 @@ namespace MyCalculator
         {
              a = Convert.ToDouble(txtDisplay.Text);
             op = ((Button)sender).Text;
-            txtDisplay.Text = "";
+            flag = true;
         
         }
 
