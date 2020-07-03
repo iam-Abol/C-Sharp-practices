@@ -65,10 +65,15 @@ namespace MyCalculator
                     break;
             }
             txtDisplay.Text = result.ToString();
+            op = null;
         }
 
         private void operators(object sender, MouseEventArgs e)
         {
+            if (op != null)
+            {
+                btnequal_Click(null, null);
+            }
              a = Convert.ToDouble(txtDisplay.Text);
             op = ((Button)sender).Text;
             flag = true;
