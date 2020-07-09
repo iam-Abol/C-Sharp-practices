@@ -93,6 +93,10 @@ namespace MyCalculator
             {
                 Numbers(btn, null);
             }
+            if (e.KeyChar == '+' || e.KeyChar == '-' || e.KeyChar == '*' || e.KeyChar == '/')
+            {
+                operators(btn, null);
+            }
         }
     }
 }
