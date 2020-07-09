@@ -109,6 +109,15 @@ namespace MyCalculator
             
         }
 
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnequal_Click(null, null);
+                btnequal.Focus();
+            }
+        }
+
        
     }
 }
