@@ -275,6 +275,7 @@
             this.btnOnOff.TabIndex = 16;
             this.btnOnOff.Text = "ON";
             this.btnOnOff.UseVisualStyleBackColor = true;
+            this.btnOnOff.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnOnOff_MouseClick);
             // 
             // Form1
             // 

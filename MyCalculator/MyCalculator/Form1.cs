@@ -25,6 +25,10 @@ namespace MyCalculator
 
             this.MaximizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            /////////////////////////////////////////
+
+            panel1.Enabled = false;
+            this.KeyPreview = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -115,6 +119,22 @@ namespace MyCalculator
             {
                 btnequal_Click(null, null);
                 btnequal.Focus();
+            }
+        }
+
+        private void btnOnOff_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (btnOnOff.Text == "ON")
+            {
+                panel1.Enabled = true;
+                this.KeyPreview = true;
+                btnOnOff.Text = "OFF";
+            }
+            else if (btnOnOff.Text == "OFF")
+            {
+                panel1.Enabled = false;
+                this.KeyPreview = false;
+                btnOnOff.Text = "ON";
             }
         }
 
