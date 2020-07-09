@@ -105,7 +105,7 @@
             this.btnBackSpace.TabIndex = 16;
             this.btnBackSpace.Text = "<-------";
             this.btnBackSpace.UseVisualStyleBackColor = true;
-            this.btnBackSpace.Click += new System.EventHandler(this.btnBachSpace_Click);
+            this.btnBackSpace.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnBackSpace_Click);
             // 
             // btn7
             // 
@@ -265,7 +265,7 @@
             this.btnequal.TabIndex = 18;
             this.btnequal.Text = "=";
             this.btnequal.UseVisualStyleBackColor = true;
-            this.btnequal.Click += new System.EventHandler(this.btnequal_Click);
+            this.btnequal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.btnequal_Click);
             // 
             // btnOnOff
             // 

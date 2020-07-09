@@ -43,10 +43,10 @@ namespace MyCalculator
             txtDisplay.Text += ((Button)sender).Text;
         }
 
-       
-           
 
-        private void btnequal_Click(object sender, EventArgs e)
+
+
+        private void btnequal_Click(object sender, MouseEventArgs e)
         {
             b = Convert.ToDouble(txtDisplay.Text);
             switch (op)
@@ -74,20 +74,21 @@ namespace MyCalculator
             {
                 btnequal_Click(null, null);
             }
-             a = Convert.ToDouble(txtDisplay.Text);
+            a = Convert.ToDouble(txtDisplay.Text);
             op = ((Button)sender).Text;
             flag = true;
-        
+
         }
 
-        private void btnBachSpace_Click(object sender, EventArgs e)
+        private void btnBackSpace_Click(object sender, MouseEventArgs e)
         {
-            txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.TextLength - 1);
+            if (txtDisplay.Text != "")
+                txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.TextLength - 1);
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Button btn=new Button();
+            Button btn = new Button();
             btn.Text = e.KeyChar.ToString();
             if (e.KeyChar >= '0' && e.KeyChar <= '9')
             {
@@ -97,6 +98,17 @@ namespace MyCalculator
             {
                 operators(btn, null);
             }
+            if (e.KeyChar == '.' && txtDisplay.Text.Contains(".") == false)
+            {
+                Numbers(btn, null);
+            }
+            if (e.KeyChar == 8)
+            {
+                btnBackSpace_Click(null, null);
+            }
+            
         }
+
+       
     }
 }
