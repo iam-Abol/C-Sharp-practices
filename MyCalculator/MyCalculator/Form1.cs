@@ -84,5 +84,15 @@ namespace MyCalculator
         {
             txtDisplay.Text = txtDisplay.Text.Substring(0, txtDisplay.TextLength - 1);
         }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Button btn=new Button();
+            btn.Text = e.KeyChar.ToString();
+            if (e.KeyChar >= '0' && e.KeyChar <= '9')
+            {
+                Numbers(btn, null);
+            }
+        }
     }
 }
